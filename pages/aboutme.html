@@ -5,45 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="">
-    <link rel="stylesheet" href="../Stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="../stylesheets/about.css">
 
     <!--Special font import-->
     <link href="https://api.fontshare.com/v2/css?f[]=lora@701,401,500,501,400,600,601,2,700,1&display=swap" rel="stylesheet">
    
     <!--Hero Delayed Appear code begins-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         ScrollReveal({duration:300})
-    </script>
+    </script> -->
     <!--Hero Delayed Appear code ends-->
     
     <!--Social Media Icon import-->
     <script src="https://kit.fontawesome.com/908283b210.js" crossorigin="anonymous"></script>
-    <title>Sarah Landis</title>
+    
+    <title>Sarah Landis|About Me</title>
 </head>
 <body>
 <a name="top"></a> <!--for top of page scroll-->
 
 <!--Header begins-->
-<div class="header">
+<header id="header">
     <div class="home">
         <a href="../index.html">S.</a> 
     </div>
 
-    <menu id="nav_bar">
-        <li><a href="../Pages/aboutme.html">Me</a></li>  
-        <li><a href="../Pages/blog.html">Blog</a></li> 
-        <li><a href="../Pages/contact.html">Contact</a></li> 
+    <menu id="navBar">
+        <ul>
+            <!--Dark Mode feature starts-->
+            <li>
+                <button class="nightMode" onclick="nightMode()"><i class="fa-regular fa-moon fa-s"></i></button>
+            </li> 
+            <!--Dark Mode feature ends-->
+            <li><a href="../pages/aboutme.html">Me</a></li>  
+            <li><a href="../pages/blog.html">Blog</a></li> 
+            <li><a href="../pages/contact.html">Contact</a></li> 
+        </ul>
     </menu>
-
-    <!--Dark Mode feature starts-->
-      <button class="nightMode" onclick="nightMode()"><i class="fa-regular fa-moon fa-s"></i></button>
-    <!--Dark Mode feature ends-->
-</div>
+</header>
 <!--Header ends-->
 
 <!--About page starts-->
-<div class="bio">
+<main class="bio">
     <span class="heading">
         <h3>
         About
@@ -51,48 +55,78 @@
     </span>
 
     <span class="headshot">
-        <img src="../Images/headshot_.jpg" alt="Photo of Sarah"
+        <img src="../images/headshot_.jpg" alt="Photo of Sarah">
     </span>
-
-    <div class="intro">
-    <h3>I'm Sarah. A junior web developer with a passion for aesthetically-pleasing
-         design. 
-    </h3>
-    <p>
-         I enjoy problem-solving and logic which is what really drew me to the industry - 
-         having the opportunity to work with and create for like-minded people is what made me stay.
-    </p>
-    <br>
+    <div class="aboutGrid">
+        <span class="headshot">
+            <img src="../images/headshot_.jpg" alt="Photo of Sarah">
+            
+        </span>
+        <div class="intro">
+            <h3>I'm Sarah. A junior web developer with a passion for aesthetically-pleasing
+                design. 
+            </h3>
+            <p>
+                I enjoy problem-solving and logic which is what really drew me to the industry - 
+                having the opportunity to work with and create for like-minded people is what made me stay. 
+                </p>
+                <hr>
+                <p>
+                As a meticulous, methodical and detail-oriented person, I am ready to take on any task. As a fast learner
+                and as someone who has a genuine interest in these sorts of things, I can excel in the computer programming
+                world. I'm eager to code your next project or help debug your application and 
+                look forward to hearing from you soon. 
+                </p>
+            <i class="fa-regular fa-face-smile"></i>  
+        </div>
+        
+        <div class="skills">
+            <h2>Background</h2>
+            <p>Graduate of Wake Forest University, BA in Communications</p>
+            <p>Graduate of Coder Academy</p>
+                <br>
+            <h2>Capabilities</h2>
+            <p>Full Stack Dev</p>
+            <span class="skillIcons">
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-python"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fa-brands fa-js"></i>
+            </span>
+            <button class="resumé"><a href="../images/Full Resumé AU:US 2021.pdf" target="_blank" alt="Resumé button">Resumé</a></button>
+        </div>
+        <br>
     </div>
-
-    <div class="skills">
-    <h2>Background</h2>
-    <p>Graduate of Wake Forest University, BA in Communications</p>
-    <br>
-    <h2>Capabilities</h2>
-    <p>Full Stack Dev</p>
-
-    <a href="../Images/Full Resumé AU:US 2021.pdf" target="_blank"</a><button class="resumé">Resumé</button></a>
-    <br>
-    </div>
-</div>
+</main>
+<br>
 <!--About Page ends-->
 
 <!--Footer begins-->
 <footer class="footer">
-    <div class="bottomLinks">
+    <nav class="bottomNav">
         <a href="#top">Back to Top</a>
-        <a href="../Pages/aboutme.html">About</a>
-        <a href="../Pages/contact.html">Say Hello</a>
-    </div>  
-    <div class="copy">Designed by Sarah Landis • 2022 &copy; </div><br>
+        <a href="../pages/aboutme.html">About</a>
+        <a href="../pages/contact.html">Say Hello</a>
+    </nav>
+    <section class="copy">
+        <div class="copyright">
+            <p>Designed by Sarah Landis • 2022 &copy; </p>
+        </div>
+        <div class="homeLink">
+            <a href="../index.html">S.</a> 
+        </div>
+    </section><br>
 </footer> 
 <!--Footer ends-->
-<script src="../scripts/index.js"></script>
+
+<!-- JS script for nightmode -->
+<script src="./scripts/index.js"></script>
 <script>
 if(localStorage.getItem("toggle")==="yes"){
     nightMode();
 }
 </script>
+<!-- JS nightmode script ends -->
 </body>
 </html>

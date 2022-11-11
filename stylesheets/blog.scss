@@ -1,0 +1,312 @@
+// BLOG Page Styling
+
+// basic stylings for all HTML pages
+// _default.scss
+@use "./defaults/main"; 
+// _buttons.scss
+@use "./defaults/buttons"; 
+// _nightmode.scss
+@use "./defaults/nightmode";
+// _header.scss
+@use "./defaults/header";
+//_footer.scss
+@use "./defaults/header";
+
+//animation for fading into screen on load
+@keyframes fadeIn {
+    0% {opacity:0; color:transparent;}
+    100% {opacity:1;}
+}
+
+//animation styling
+.blogBody{
+    animation: fadeIn 3000ms;
+    animation-fill-mode: backwards; 
+}
+
+//Title styling
+.blogHeader h3 {
+    width:100vw;
+    text-align: center;
+    text-transform: initial;
+    font-family: "Lora", "open-serif";
+    font-weight: lighter;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+    margin:40px 0;
+}
+
+.preface h2{
+    font-family: "open-sans";
+    font-size: 1.25em;
+    font-weight: 200;
+    display: inline-block;
+    margin-bottom:20px;
+    text-align: center;
+    padding: 3vh;
+    letter-spacing:1px;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+//Container for all blog elements
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    overflow: hidden;
+    height:100vh;
+    width:100vw;
+    animation: fadeIn 3000ms;
+    animation-fill-mode: backwards; 
+    @media screen and (min-width:700px){
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto;
+        margin-bottom:5vh;
+    }
+}
+
+//Small navigational blog index styling
+.primaryNav{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display:flex;
+    grid-row-start: 2;
+    /* width:100vw; */
+    @media screen and (min-width:720px){
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: block;
+        scroll-snap-type: y mandatory;
+        grid-row-start: auto;
+    }
+    a{
+        min-width: 45vw;
+        display: flex;
+        margin-right: 10px;
+        @media screen and (min-width:720px){
+            margin-bottom: 10px;
+            min-height: 20vh;
+            min-width: 100%;
+        }
+        @media screen and (min-width:1200px){
+            margin-bottom: 10px;
+            min-height: 200px;
+            min-width: 100%;
+        }
+    }
+}
+
+.smallCarousel{
+    list-style-type:none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    display:flex;
+    grid-row-start: 2;
+    margin:0;
+    padding:0;
+    @media screen and (min-width:720px){
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+        display:block;
+        grid-row-start: 2;
+        height: 99.5vh;
+        min-width:20vw;
+    }
+    @media screen and (min-width:1200px){
+        overflow-y: scroll;
+        grid-row-start: 2;
+    }
+    img{
+    height:30vh;
+        @media screen and (min-width:720px){
+            width:20vw;
+        }
+    }
+}
+
+//Blog information
+.descrip{
+    padding:10px;
+    color:black;
+    text-align: left;
+    font-size: smaller;
+    width:100vw;
+    min-width: 45vw;
+    display: flex;
+    margin-right: 10px;
+    grid-row-start: 2;
+    scroll-snap-align: start;
+    @media screen and (min-width:720px){
+        display: inline-flex;
+        flex-direction: column;
+    }
+    a{
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        padding:0;
+        @media screen and (min-width:720px){
+            display: block;
+            width:fit-content;
+            margin:0;
+        }
+    }
+}
+
+.brief{
+    padding:0;
+    color:black;
+    text-align: left;
+    min-width: 25vw;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: left;
+    align-self: center;
+    @media screen and (min-width:720px){
+        font-size: smaller;
+        width:5vw;
+        margin:0px;
+        overflow-wrap: break-word;
+        align-content: center;
+    }
+    h1{
+        margin:0;
+        overflow-wrap: break-word;
+        font-family: "open-sans";
+        @media screen and (min-width:720px){
+            width:14vw;
+        }
+    }
+    h3{
+        margin-top:5px;
+        overflow-wrap: break-word;
+        font-weight: 500;
+        font-family: "open-serif";
+    }
+    p{
+       font-style: italic;
+       font-size: 1.25em;
+    }
+}
+
+.primaryNav__img{
+    object-fit: cover;
+    filter: saturate(0);
+    transition: 0.3s ease all;
+}
+
+.primaryNav a:hover .primaryNav__img{
+    transform: scale(1.05);
+    filter: saturate(1);
+}
+
+//Large blog post styling
+.gallery{
+    overflow-x: scroll;
+   /* overflow-y:hidden; */
+    scroll-snap-type:x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+    width: 100vw;
+    @media screen and (min-width:720px){
+        display: block;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width:84vw;
+    }
+}
+
+.posts{
+    list-style-type: none;
+    padding:0;
+}
+
+.blogEntry{
+    /* overflow-x: scroll; */
+    overflow-y:scroll;
+    scroll-snap-type:x mandatory;
+    scroll-behavior: smooth;
+    position: relative;
+    width: 100vw;
+    display: inline-flex;
+}
+   
+.writing{
+    width: 100vw;
+    height:25vh;
+    margin-top:15vw;
+    /* padding-left:15px; */
+    padding:2vw;
+    position:absolute;   
+    text-align: center;
+    background-color: $background-color;
+    opacity: .95;
+    overflow-x:hidden;
+    @media screen and (min-width:720px){
+        width: 84vw;
+        height:50vh;
+        position:absolute;
+        margin-top:20vh;    
+        padding-top:25px;
+        overflow-x:scroll;
+    }
+    h1{
+        margin:0;
+        overflow-wrap: break-word;
+        font-family: "lora", "open-serif";
+        font-weight:lighter;
+        font-size: 1.5em;
+        letter-spacing: 1.5px;
+        width:95%;
+    }
+    h2{
+        margin-top:5px;
+        overflow-wrap: break-word;
+        font-weight: 100;
+        font-family: "open-serif";
+        font-size:1em;
+        width:95%;
+    }
+    p{
+        font-size: 1.25em;
+        font-family: "open-sans";
+        line-height: 1.25;
+        padding-right:30px;
+        width:95%;
+    }
+}
+
+.blog__img{
+    scroll-snap-align: start;
+    margin-bottom: 10px;
+    object-fit: cover;
+    @media screen and (min-width:720px){
+        margin-right:10px;
+        min-height:100vh;
+        min-width: 100vw;
+    }
+    @media screen and (min-width:1200px){
+        min-width: auto;
+    }
+}
+
+@media screen and (min-width:720px){
+    .descrip img{
+        margin-bottom: 10px;
+        min-height: 200px;
+        min-width: 15px;
+        /* overflow: hidden; */
+        object-fit: cover;
+    }
+}
+
+
+        
+
+
+

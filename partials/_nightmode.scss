@@ -1,0 +1,115 @@
+// formatting for when in darkmode
+
+//darkmode color scheme
+$background-color2: #422c22;
+$footercolor-2:#2c2111;
+$secondaryText-color: #cb997e;
+$hover-color2: #E5CDB0;
+$link-color2:#cb997e;
+$contrast-color2: #48382A;
+
+//Hero print for darkmode page body background
+.dark-mode .hero, .dark-mode .blogBody, .dark-mode .connectBody, .dark-mode .projectBody,
+.dark-mode .bio, .dark-mode .contactForm{
+    background-color: $background-color2;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ehoundstooth%3C/title%3E%3Cg fill='%2348392a' fill-opacity='0.19' fill-rule='evenodd'%3E%3Cpath d='M0 18h6l6-6v6h6l-6 6H0M24 18v6h-6M24 0l-6 6h-6l6-6M12 0v6L0 18v-6l6-6H0V0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+//general styling in dark mode
+.dark-mode {
+    background-color: $background-color2;
+    color: $secondaryText-color;
+    button{
+        background-color: transparent;
+        border: transparent;
+        color: $secondaryText-color;
+        :hover{
+            background-color: transparent;
+            border: transparent;
+            color: $link-color2;
+            transition-duration: .8s;    
+        }
+    }
+}
+
+//formatting for links in darkmode
+.dark-mode{
+    a {
+    color: $link-color2;
+        :hover{
+        color:$hover-color2;}
+    }
+}
+
+//styling for Index HTML page in darkmode
+.dark-mode.name h1{
+    color: $secondaryText-color;
+    border-bottom: 1px solid #EDDCD2;
+}
+
+.dark-mode.resumé{
+    button{
+        background-color: transparent;
+        display: flex;
+        border: 1px solid white;
+    }
+}
+
+//styling for About HTML page in darkmode
+.dark-mode button.resumé{
+    display: flex;
+    background-color:$background-color2;
+    border:1px solid $hover-color2;
+    color:$secondaryText-color;
+    :hover{
+        display: flex;
+        background-color: $contrast-color2;
+        border:1px solid $secondaryText-color;
+        box-shadow: 0px 10px 20px $hover-color2;
+    }
+}
+
+//styling for Blog HTML page in darkmode
+.dark-mode .brief{
+    color:$secondaryText-color;
+}
+
+.dark-mode .writing{
+    background-color:$secondaryText-color;
+    color:#261405;
+    opacity:.95;
+}
+
+
+//styling for Contact HTML page in darkmode
+.dark-mode input{
+    background-color:$hover-color2;
+    border-color: $link-color2;
+}
+
+.dark-mode input[type=submit]{
+    background-color: $contrast-color2;
+    border:1px solid $link-color2;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    :hover{
+        background-color: $contrast-color2;
+        border:1px solid $link-color2;
+        box-shadow: 0px 10px 20px $link-color2;
+        transform: translateY(-5px);
+    }
+}
+
+.dark-mode textarea{
+    background-color:$hover-color2;
+    border-color: $secondaryText-color;
+}
+
+
+// styling for Projects HTML page
+.dark-mode .tile{
+    background-color: $background-color2;
+    :hover{
+        background-color: $footercolor-2;
+    }
+}

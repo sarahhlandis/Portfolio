@@ -1,0 +1,22 @@
+//variables
+$hover-color1:#E5CDB0;
+
+
+// header nav bar moon button
+button.nightMode{
+    background-color: transparent;
+    border:transparent;
+    color: black;
+    position: absolute;
+    display:inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+}
+    
+//all buttons hover formatting
+button:hover{
+    cursor: pointer;
+    color: $hover-color1;
+    transition-duration: .8s;
+}
