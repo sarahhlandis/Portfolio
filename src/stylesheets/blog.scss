@@ -18,16 +18,6 @@
     100% {opacity:1;}
 }
 
-//links styling
-a{
-    text-decoration: none;
-    color:m.$primaryText-color;
-    :hover{
-        color: m.$hover-color1;
-        transition-duration: .8s;
-    }
-}
-
 //animation for page body styling
 .blogBody{
     animation: fadeIn 3000ms;
