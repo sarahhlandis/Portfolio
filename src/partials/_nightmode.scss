@@ -44,6 +44,8 @@ $contrast-color2: #48382A;
 .dark-mode{
     a {
     color: $link-color2;
+    text-decoration: none;
+    list-style-type: none;
         :hover{
         color:$hover-color2;
         }
@@ -64,7 +66,13 @@ $contrast-color2: #48382A;
     button{
         background-color: transparent;
         display: flex;
-        border: 1px solid white;
+        border: transparent;
+        color: $secondaryText-color;
+        a {
+            color: $link-color2;
+            text-decoration: none;
+            list-style-type: none;
+        }
     }
 }
 
