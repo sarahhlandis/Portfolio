@@ -29,7 +29,7 @@ The purpose of this website is to show off some HTML and CSS skills that I've le
 My target audience are those who are seeking to learn more about me and my work. I hope to demonstrate a bit about my character through my site, from the overall design aesthetic to the curation of all the element positioning and overall organization. I hope employers will get the sense that I have a clean work ethic, with a focus on functionality and concision. I hope web developers will see the creativity in my code and reach out with any suggestions on refactoring or improved usability.
 
 ### Sitemap: 
-![sitemap - created on Drawio](./docs/sitemap.png)
+![sitemap - created on Drawio](/docs/sitemap.png)
 Please see above for this site's sitemap, created with Drawio. As pictured, the site features a home button (return to main) option in both the header and footer allowing easy navigation between the pages. Me, Blog, and Contact are the three main header links which are displayed on all pages. Projects and Connect are only accesible from the home page, as well as the social links via icons.
 
 ### Implementation:
