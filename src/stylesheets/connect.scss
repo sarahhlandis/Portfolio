@@ -18,6 +18,16 @@
     100% {opacity:1;}
 }
 
+//links styling
+a{
+    text-decoration: none;
+    color:m.$primaryText-color;
+    :hover{
+        color: m.$hover-color1;
+        transition-duration: .8s;
+    }
+}
+
 //side boxes animations styling
 @keyframes slideLeft{
     0%{transform:translateX(500px);opacity:0;}
