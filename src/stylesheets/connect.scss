@@ -2,15 +2,15 @@
 
 // basic stylings for all HTML pages
 // _main.scss
-@use "../partials/main" as m; 
+@use '../partials/main' as m; 
 // _nightmode.scss
-@use "../partials/nightmode" as n;
+@use '../partials/nightmode' as n;
 //_footer.scss
-@use "../partials/footer" as f;
+@use '../partials/footer' as f;
 // _header.scss
-@use "../partials/header" as h;
+@use '../partials/header' as h;
 // _buttons.scss
-@use "../partials/buttons" as b; 
+@use '../partials/buttons' as b; 
 
 //on load animation 
 @keyframes fadeIn {
