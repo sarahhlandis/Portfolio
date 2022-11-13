@@ -6,4 +6,4 @@ function nightMode() {
     }else{
        localStorage.setItem("toggle","no");
     }
-   }
+}

@@ -19,12 +19,21 @@
     justify-content: center;
     align-items: flex-end;
     height:7vh;
-    a {font-family: "Lora";
-        a + a:before{
-        content:" | ";
-        padding: 0 10px;
-        }   
+    a {
+        font-family: "Lora";
+        text-decoration: none;
+        color:m.$primaryText-color;
+        :hover{
+            color: m.$hover-color1;
+            transition-duration: .8s;
+        }
     }
+
+.bottomNav a + a:before{
+content:" | ";
+padding: 0 10px;
+}   
+
 }
 
 // footer grid container

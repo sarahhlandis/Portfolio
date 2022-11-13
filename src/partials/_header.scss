@@ -9,6 +9,16 @@
     overflow: hidden;
     .home{
         padding:0px 5px;
+        a {
+            font-family: "Lora";
+            text-decoration: none;
+            color:m.$primaryText-color;
+            :hover{
+                color: m.$hover-color1;
+                transition-duration: .8s;
+            }
+        
+        }
     }
 }
 
@@ -35,12 +45,21 @@
             display: inline-flex;
             justify-content: flex-end;
             align-items: center;
+                a{
+                font-family: "Lora";
+                text-decoration: none;
+                color:m.$primaryText-color;
+                    :hover{
+                        color: m.$hover-color1;
+                        transition-duration: .8s;
+                    }
+                }
                 button{
                 font-size: 16px;
                 padding:.95vw;
                 font-weight:100;
                 margin-top:.5vh;
                 }
-            }
+            }   
         }
     }

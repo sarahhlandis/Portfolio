@@ -16,18 +16,10 @@ box-sizing: border-box;
 body {
     margin:4px;
     text-decoration: none;
-    list-style: none;
+    list-style-type: none;
     background-color:$background-color;
 }
 
-a{
-    text-decoration: none;
-    color:m.$primaryText-color;
-    :hover{
-        color: m.$hover-color1;
-        transition-duration: .8s;
-    }
-}
 
 //background image for specific body of each individual page (not HTML body)
 .bio, 
