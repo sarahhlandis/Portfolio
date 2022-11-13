@@ -1,7 +1,7 @@
 // _main.scss
-@use "../partials/main" as m; 
+@use "/src/partials/main" as m; 
 // _nightmode.scss
-@use "../partials/nightmode" as n;
+@use "/src/partials/nightmode" as n;
 
 // footer container
 .footer{
