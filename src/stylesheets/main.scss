@@ -134,6 +134,14 @@
     animation: fadeIn 2800ms;
         animation-delay:2500ms;
         animation-fill-mode: backwards;
+    a{
+        text-decoration: none;
+        color:m.$primaryText-color;
+        :hover{
+            color: m.$hover-color1;
+            transition-duration: .8s;
+        }
+    }
     @media screen and (min-width: 1200px){
         font-size: 8vh;
     }

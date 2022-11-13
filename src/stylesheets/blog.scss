@@ -8,7 +8,7 @@
 //_footer.scss
 @use "../partials/footer" as f;
 // _header.scss
-@use "../partials/header" as h;
+@import "./partials/header";
 // _buttons.scss
 @use "../partials/buttons" as b; 
 
