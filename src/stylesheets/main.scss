@@ -2,15 +2,15 @@
 
 // basic stylings for all HTML pages
 // _main.scss
-@use '../partials/main' as m; 
+@import '../partials/main';
 // _nightmode.scss
-@use '../partials/nightmode' as n;
+@import '../partials/buttons';
 //_footer.scss
-@use '../partials/footer' as f;
+@import '../partials/footer';
 // _header.scss
-@use '../partials/header' as h;
+@import '../partials/header';
 // _buttons.scss
-@use '../partials/buttons' as b; 
+@import '../partials/nightmode';
 
 
 
@@ -40,7 +40,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox=
     font-size: 3em;
     font-weight: 300;
     font-style: italic;
-    border-bottom: 1px solid m.$primaryText-color;
+    border-bottom: 1px solid $primaryText-color;
     //animation styling
     animation: fadeIn 1200ms;
         animation-delay:500ms;
@@ -115,7 +115,7 @@ margin-top:32vh;
     width: 1px;
     height: 100px;
     position: relative;
-    background-color:m.$contrast-color1;
+    background-color:$contrast-color1;
     margin-left: 22px;
     margin-bottom: 0px;
     padding-bottom: 0;
@@ -136,9 +136,9 @@ margin-top:32vh;
         animation-fill-mode: backwards;
     a{
         text-decoration: none;
-        color:m.$primaryText-color;
+        color:$primaryText-color;
         :hover{
-            color: m.$hover-color1;
+            color: $hover-color1;
             transition-duration: .8s;
         }
     }
@@ -149,9 +149,9 @@ margin-top:32vh;
 
 a{
     text-decoration: none;
-    color:m.$primaryText-color;
+    color:$primaryText-color;
     :hover{
-        color: m.$hover-color1;
+        color: $hover-color1;
         transition-duration: .8s;
     }
 }

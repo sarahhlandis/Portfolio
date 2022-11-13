@@ -2,15 +2,15 @@
 
 // basic stylings for all HTML pages
 // _main.scss
-@use '../partials/main' as m; 
+@import '../partials/main';
 // _nightmode.scss
-@use '../partials/nightmode' as n;
+@import '../partials/buttons';
 //_footer.scss
-@use '../partials/footer' as f;
+@import '../partials/footer';
 // _header.scss
-@use '../partials/header' as h;
+@import '../partials/header';
 // _buttons.scss
-@use '../partials/buttons' as b; 
+@import '../partials/nightmode';
 
 //animation for fading into screen on load
 @keyframes fadeIn {
@@ -63,12 +63,12 @@ animation-fill-mode: backwards;
 }
 
 .tile{
-    background: m.$background-color;
+    background: $background-color;
     box-shadow: 0 10px 30px -15px;
     height: 250px;
     max-width:325px;
     :hover{
-        background-color:m.$footercolor;
+        background-color:$footercolor;
         opacity: 1.0;
         transition-duration: .5s;
         transform: translateY(-3px);

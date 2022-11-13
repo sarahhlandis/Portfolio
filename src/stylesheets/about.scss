@@ -2,15 +2,16 @@
 
 // basic stylings for all HTML pages
 // _main.scss
-@use '../partials/main' as m; 
+@import '../partials/main';
 // _nightmode.scss
-@use '../partials/nightmode' as n;
+@import '../partials/buttons';
 //_footer.scss
-@use '../partials/footer' as f;
+@import '../partials/footer';
 // _header.scss
-@use '../partials/header' as h;
+@import '../partials/header';
 // _buttons.scss
-@use '../partials/buttons' as b; 
+@import '../partials/nightmode';
+
 
 //animation for fading into screen on load
 @keyframes fadeIn {
@@ -113,7 +114,7 @@
     }
     hr{
         width:100%;
-        background-color:m.$contrast-color1;
+        background-color:$contrast-color1;
         height:1px;
         border:none;
     }
@@ -155,7 +156,7 @@
 }
 
 button.resumé{
-    background-color: m.$contrast-color1;
+    background-color: $contrast-color1;
     display: flex;
     border: none;
     align-items: center;
@@ -168,8 +169,8 @@ button.resumé{
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
         :hover{
-        background-color: m.$hover-color1;
-        box-shadow: 0px 15px 20px m.$hover-color1;
+        background-color: $hover-color1;
+        box-shadow: 0px 15px 20px $hover-color1;
         color: #fff;
         transform: translateY(-3px);
         }
