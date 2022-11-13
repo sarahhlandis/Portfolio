@@ -22,6 +22,7 @@
 .bio{
     animation: fadeIn 3000ms;
     animation-fill-mode: backwards; 
+    padding-top:4vh;
     //for page to extend when content is short
     @media screen and (min-width: 1200px){
         display: flex;
