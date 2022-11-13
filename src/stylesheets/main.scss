@@ -20,6 +20,14 @@
     100% {opacity:1;}
 }
 
+//for when content is short
+.hero{
+    display: flex;
+    min-height: 85vh;
+    flex-direction: column;
+/* justify-content: space-between; */
+}
+
 //Hero Name + feature text below
 .name h1 {
     display: inline-flex;
@@ -92,6 +100,7 @@
         padding: 4px;
         font-size: 18px;
         writing-mode: vertical-lr; 
+        color:$primaryText-color;
         a{
             display:flex;
             justify-content: space-around;
@@ -115,12 +124,14 @@
 .bigLinks {
     font-size: 7vh;
     letter-spacing: .5rem;
-    display: block;
-    margin-left: 50vw;
-    margin-top: 15vh;
     padding-left: 10px;
-    border-left: 1px solid m.$contrast-color1;
+    border-left: 1px solid #d7d3c1;
     line-height: 85%;
+    justify-self: center;     
+    align-self:center;  
+    animation: fadeIn 2800ms;
+        animation-delay:2500ms;
+        animation-fill-mode: backwards;
     @media screen and (min-width: 1200px){
         font-size: 8vh;
     }
