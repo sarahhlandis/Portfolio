@@ -1,0 +1,21 @@
+// _main.scss
+@use "../partials/main" as m; 
+
+// header nav bar moon button
+button.nightMode{
+    background-color: transparent;
+    border:transparent;
+    color: m.$primaryText-color;
+    position: absolute;
+    display:inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+}
+    
+//all buttons hover formatting
+button:hover{
+    cursor: pointer;
+    color: m.$hover-color1;
+    transition-duration: .8s;
+}

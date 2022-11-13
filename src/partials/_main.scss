@@ -1,0 +1,30 @@
+//lightmode color scheme
+$background-color: #FBF1EA;
+$footercolor: #EFEDE6;
+$primaryText-color: #261405;
+$hover-color1:#E5CDB0;
+$link-color1: #190e03;
+$contrast-color1:#d7d3c1;
+$font-stack: "lora", "open-serif";
+
+* {
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+}
+
+body {
+    margin:4px;
+    text-decoration: none;
+    list-style: none;
+    background-color:$background-color;
+}
+
+//background image for specific body of each individual page (not HTML body)
+.bio, .hero, .blogBody, .projectBody, .contactForm{
+    background-color: $background-color;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ehoundstooth%3C/title%3E%3Cg fill='%23efede6' fill-opacity='0.43' fill-rule='evenodd'%3E%3Cpath d='M0 18h6l6-6v6h6l-6 6H0M24 18v6h-6M24 0l-6 6h-6l6-6M12 0v6L0 18v-6l6-6H0V0'/%3E%3C/g%3E%3C/svg%3E");
+    color:$primaryText-color;
+    animation: fadeIn 3000ms;
+    animation-fill-mode: backwards; 
+}

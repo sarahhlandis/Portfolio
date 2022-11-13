@@ -1,0 +1,131 @@
+// CONTACT Page Styling
+
+// basic stylings for all HTML pages
+// _main.scss
+@use "../partials/main" as m; 
+// _nightmode.scss
+@use "../partials/nightmode" as n;
+//_footer.scss
+@use "../partials/footer" as f;
+// _header.scss
+@use "../partials/header" as h;
+// _buttons.scss
+@use "../partials/buttons" as b; 
+
+//animation for fading into screen on load
+@keyframes fadeIn {
+    0% {opacity:0; color:transparent;}
+    100% {opacity:1;}
+}
+
+.contactForm{
+    flex-direction: column;
+    display: flex;
+    min-height: 80vh;
+    //animation page body styling
+    animation: fadeIn 3000ms;
+    animation-fill-mode: backwards; 
+}
+    
+.welcomeText{
+    h3{
+        display:flex;
+        justify-content: center;
+        font-family: "lora","open-serif";
+        font-weight: 100;
+        font-size: 2.5em;
+        letter-spacing: 1.5px;
+        padding:15px;
+        text-align: center;
+    }
+    h2{
+        display:flex;
+        width: 64%;
+        margin-left: 18%;
+        text-align: center;
+        justify-content: center;
+        font-family: "open-serif";
+        font-weight: 100;
+        font-size: 1.25rem;
+        line-height: 4vh;
+    }
+}
+    
+.contactForm form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100vw;
+    animation: fadeIn 3000ms;
+        animation-fill-mode: backwards; 
+}
+    
+input[type=text]{
+    display:inline-block;
+    padding: 10px;
+    margin-left: 25vw;
+    margin-top: 1vw;
+    justify-content: center;
+    width: 25%;
+}
+
+button.input[type=file]{
+    padding: 10px;
+    margin-left: 25vw;
+    margin-top: 1vw;
+    justify-content: center;
+    width: 25%;
+    border-style:double;
+}
+    
+input {
+    display:flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-left: 25vw;
+    margin-top: 1vw;
+    justify-content: center;
+    width: 50%;
+    background-color:m.$footercolor;
+    border-style:double;
+    border-color: m.$contrast-color1;
+    font-family:"open-sans","lora";
+}
+    
+input[type=submit]{
+    display:flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-left: 38vw;
+    margin-bottom: 3vh;
+    margin-top: 1vw;
+    justify-content: center;
+    width: 25vw;
+    font-family: "open-serif";
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: m.$contrast-color1;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    :hover{
+        background-color: m.$hover-color1;
+        box-shadow: 0px 15px 20px m.$hover-color1;
+        color: #fff;
+        transform: translateY(-5px);
+    }
+}
+    
+textarea{
+    display:flex;
+    flex-direction: row;
+    max-width:50.25%;
+    padding: 10px;
+    margin-left: 25vw;
+    margin-top: 1vw;
+    justify-content: center;
+    background-color:m.$footercolor;
+    border-style:double;
+    font-family:"open-sans","lora";
+    border-color: m.$contrast-color1;
+}

@@ -1,0 +1,46 @@
+// header container incl. upper left letter logo
+#header{
+    font-family: "Lora", "open-serif";
+    font-size: 3rem;
+    display:flex;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    overflow: hidden;
+    .home{
+        padding:0px 5px;
+    }
+}
+
+// nav links container
+#navBar{
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    animation: fadeIn 1200ms;
+    animation-delay:500ms;
+    animation-fill-mode: backwards;  
+        ul{
+        display: inline-flex;
+        padding: 0px 5px;
+            li{
+            font-size: 20px;
+            padding:.95vw;
+            font-family: "open-serif";
+            font-weight:100;
+            text-transform: lowercase;
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+                button{
+                font-size: 16px;
+                padding:.95vw;
+                font-weight:100;
+                margin-top:.5vh;
+                }
+            }
+        }
+    }

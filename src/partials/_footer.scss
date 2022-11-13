@@ -1,0 +1,53 @@
+// _main.scss
+@use "../partials/main" as m; 
+// _nightmode.scss
+@use "../partials/nightmode" as n;
+
+// footer container
+.footer{
+    display:flex;
+    flex-direction: column;
+    width:100vw;
+    height: 15vh;
+    font-size: .8rem;
+    background-color: m.$footercolor;
+}
+
+// footer navigation link formatting
+.bottomNav{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:7vh;
+    a {font-family: "Lora";
+        a + a:before{
+        content:" | ";
+        padding: 0 10px;
+        }   
+    }
+}
+
+// footer grid container
+.copy{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width:100vw;
+    .copyright{
+        place-self: start center;
+        font-size: smaller;
+        grid-column: 2/span 2;
+    }
+}
+
+// lower right 'return home' icon link
+.homeLink{
+    font-size: 30px;
+    justify-self: end;
+    align-self: start;
+    padding-right:1vw;
+}
+
+// dark mode footer formatting 
+.dark-mode .footer{
+    background-color:n.$footercolor-2;
+}
